@@ -1,0 +1,109 @@
+@font-face {
+  font-family: BillBoard;
+  src: url(Neonderthaw-Regular.ttf);
+}
+@font-face {
+  font-family: RegularNeon;
+  src: url(TiltNeon-Regular.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: RegularNeon;
+}
+header {
+  background-color: black;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #2c2b2b;
+  font-family: BillBoard;
+  font-size: 200px;
+  text-shadow: 0 0 0px white;
+  animation: lightUp 3s 1s 1 ease-in;
+  animation: glow 2s 3s infinite alternate;
+}
+
+@keyframes lightUp {
+  from {
+    color: #2c2b2b;
+    text-shadow: 0 0 0px white;
+  }
+
+  50% {
+    color: white;
+    text-shadow: 0 0 8px white;
+  }
+  to {
+    color: white;
+    text-shadow: 0 0 20px white;
+  }
+}
+
+@keyframes glow {
+  from {
+    color: white;
+    text-shadow: 0 0 8px white;
+  }
+  to {
+    color: white;
+    text-shadow: 0 0 20px white;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-family: RegularNeon;
+  font-size: 50px;
+}
+
+li {
+  color: rgb(148, 144, 144);
+  padding: 5px 10px;
+  border: 2px black solid;
+}
+
+#listItem1 {
+  animation: flyUp 4s ease-in 1;
+}
+
+#listItem2 {
+  animation: flyUp 4.5s ease-in 1;
+}
+
+#listItem3 {
+  animation: flyUp 5s ease-in 1;
+}
+
+#listItem4 {
+  animation: flyUp 5.5s ease-in 1;
+}
+
+li:hover {
+  color: white;
+  border: 2px white solid;
+  border-radius: 4px;
+  transform: scale(1.05, 1.05);
+}
+
+@keyframes flyUp {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+section {
+  padding: 50px;
+}

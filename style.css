@@ -44,7 +44,7 @@ h1 {
   }
 
   50% {
-    color: rgb(152, 150, 150);
+    color: rgb(201, 201, 201);
     text-shadow: 0 0 8px white;
   }
   to {
@@ -76,6 +76,9 @@ li {
   color: rgb(148, 144, 144);
   padding: 5px 10px;
   border: 2px black solid;
+  transition-property: color border border-radius transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 #listItem1 {
@@ -107,6 +110,9 @@ li:hover {
     transform: translateY(100vh);
     opacity: 0;
   }
+  95% {
+    opacity: 0;
+  }
   to {
     transform: translateY(0);
     opacity: 100;
@@ -119,7 +125,8 @@ main {
 
 section {
   padding: 50px;
-  /* height: 1000px; */
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 
 button.scrollUpBtn {
@@ -132,6 +139,9 @@ button.scrollUpBtn {
   border-radius: 50%;
   background-color: white;
   border: 2px black solid;
+  transition-property:transform box-shadow ;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 .scrollUpBtn:hover {
@@ -148,7 +158,7 @@ button.scrollUpBtn {
 }
 
 .myImage {
-  height: 700px;
+  height: 900px;
 }
 
 h2 {
@@ -173,10 +183,13 @@ p {
   flex-direction: column;
   text-align: center;
   padding-bottom: 15px;
+  transition-property: transform;
+  transition-duration: .4s;
+  transition-timing-function: ease-out;
 }
 
 .projectsItem:hover {
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 30%);
+  transform: scale(1.03);
 }
 
 /* .projectsItem > img:hover {
@@ -184,9 +197,12 @@ p {
 } */
 .Ico {
   width: 60px;
+  transition-property: transform;
+  transition-duration: .4s;
+  transition-timing-function: ease-in-out;
 }
 .Ico:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
   cursor: pointer;
 }
 .projectsItem > div {
@@ -194,41 +210,68 @@ p {
   justify-content: space-evenly;
   padding: 20px;
 }
-
+#section2 > img {
+  padding: 50px;
+  width: 200px;
+}
 #section4 {
   background-color: black;
   color: white;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 #section4 > h2 {
   text-align: center;
 }
 
-form > fieldset {
+form {
   display: grid;
-  grid-template-columns: 300px 400px;
-  grid-template-rows: 60px 60px 400px ;
+  grid-template-columns: 500px;
+  grid-template-rows: 60px 120px 120px 400px 120px;
   justify-content: center;
 }
 form > button {
+  align-self: center;
   color: white;
   background-color: black;
   border: 2px solid white;
   font-size: 40px;
-  border-radius: 5px;
-  margin-left: 45%;
+  border-radius: 25px;
+  margin-left: 35%;
   margin-top: 20px;
   width: 200px;
   height: 100px;
+  transition-property: transform border-radius;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
 }
 
 form > button:hover {
   transform: scale(1.03);
+  border-radius: 15px;
+}
+input {
+  height: 80px;
 }
 input,
 textarea {
+  width: 600px;
   background-color: black;
   color: white;
   border: 2px white solid;
   border-radius: 5px;
+}
+input:focus,textarea:focus{
+  box-shadow: 0 0 20px white;
+}
+#section4 > div {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#section4 > div > img {
+  margin: 50px;
+  width: 100px;
 }

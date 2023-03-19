@@ -10,6 +10,8 @@
 body {
   margin: 0;
   font-family: RegularNeon;
+  display: flex;
+  flex-direction: column;
 }
 header {
   background-color: black;
@@ -20,6 +22,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url(dark-brick-wall.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -93,6 +99,7 @@ li:hover {
   border: 2px white solid;
   border-radius: 4px;
   transform: scale(1.05, 1.05);
+  cursor: pointer;
 }
 
 @keyframes flyUp {
@@ -112,7 +119,7 @@ main {
 
 section {
   padding: 50px;
-  height: 800px;
+  /* height: 1000px; */
 }
 
 button.scrollUpBtn {
@@ -149,5 +156,79 @@ h2 {
 }
 
 p {
-  font-size: 30px;
+  font-size: 33px;
+}
+
+.projectContainer {
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 600px);
+  gap: 50px;
+}
+
+.projectsItem {
+  height: 600px;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 30%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.projectsItem:hover {
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 30%);
+}
+
+/* .projectsItem > img:hover {
+  transform: scale(1.03);
+} */
+.Ico {
+  width: 60px;
+}
+.Ico:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.projectsItem > div {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+#section4 {
+  background-color: black;
+  color: white;
+}
+
+#section4 > h2 {
+  text-align: center;
+}
+
+form > fieldset {
+  display: grid;
+  grid-template-columns: 300px 400px;
+  grid-template-rows: 60px 60px 400px ;
+  justify-content: center;
+}
+form > button {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  font-size: 40px;
+  border-radius: 5px;
+  margin-left: 45%;
+  margin-top: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+form > button:hover {
+  transform: scale(1.03);
+}
+input,
+textarea {
+  background-color: black;
+  color: white;
+  border: 2px white solid;
+  border-radius: 5px;
 }

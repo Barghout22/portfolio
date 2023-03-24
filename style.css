@@ -1,12 +1,15 @@
 @font-face {
   font-family: BillBoard;
-  src: url(Neonderthaw-Regular.ttf);
+  src: url(/fonts/Neonderthaw-Regular.ttf);
 }
 @font-face {
   font-family: RegularNeon;
-  src: url(TiltNeon-Regular.ttf);
+  src: url(/fonts/TiltNeon-Regular.ttf);
 }
 
+*{
+  border: 2px solid yellow;
+}
 body {
   margin: 0;
   font-family: RegularNeon;
@@ -22,7 +25,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(dark-brick-wall.jpg);
+  background-image: url(./image_resources/dark-brick-wall.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -186,15 +189,20 @@ p {
   transition-property: transform;
   transition-duration: .4s;
   transition-timing-function: ease-out;
+  overflow: hidden;
 }
 
 .projectsItem:hover {
-  transform: scale(1.03);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 45%);
 }
 
-/* .projectsItem > img:hover {
-  transform: scale(1.03);
-} */
+.projectsItem>img{
+  height: 500px;
+  transition: all .5s;
+}
+.projectsItem > img:hover {
+  transform: scale(1.1);
+}
 .Ico {
   width: 60px;
   transition-property: transform;
@@ -280,4 +288,9 @@ input:focus,textarea:focus{
   margin-left: 250px;
   margin-right: 250px;
   margin-bottom: 50px;
+}
+
+legend{
+  width:200px;
+
 }

@@ -1,10 +1,10 @@
 @font-face {
   font-family: BillBoard;
-  src: url(/fonts/Neonderthaw-Regular.ttf);
+  src: url(./fonts/Neonderthaw-Regular.ttf);
 }
 @font-face {
   font-family: RegularNeon;
-  src: url(/fonts/TiltNeon-Regular.ttf);
+  src: url(./fonts/TiltNeon-Regular.ttf);
 }
 
 /* * {

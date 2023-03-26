@@ -73,6 +73,7 @@ ul {
   list-style: none;
   font-family: RegularNeon;
   font-size: 50px;
+  z-index: 1;
 }
 
 li {
@@ -127,7 +128,7 @@ main {
 }
 
 section {
-  padding: 50px;
+  padding: 0 30px 0 30px;
   margin-top: 150px;
   margin-bottom: 150px;
 }
@@ -156,10 +157,15 @@ button.scrollUpBtn {
   display: flex;
   flex-direction: column;
 }
-
-#section1 > img {
-  width: 80%;
+#section1 > div {
+  display: flex;
 }
+#section1 > div > img {
+  width: 40%;
+}
+/* #section1 > img {
+  width: 70%;
+} */
 .aboutContainer {
   margin: 20px;
 }
@@ -169,7 +175,7 @@ h2 {
 }
 
 p {
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .projectContainer {
@@ -190,6 +196,7 @@ p {
   transition-duration: 0.4s;
   transition-timing-function: ease-out;
   overflow: hidden;
+  z-index: 1;
 }
 
 .projectsItem:hover {
@@ -207,14 +214,22 @@ p {
   transform: scale(1.1);
 }
 .Ico {
-  width: 45px;
+  width: 55px;
   transition-property: transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
 .Ico:hover {
-  transform: scale(1.03);
+  transform: scale(1.1);
   cursor: pointer;
+}
+.notActv {
+  transition: none;
+  opacity: 40%;
+}
+.notActv:hover {
+  transform: scale(1);
+  cursor: auto;
 }
 .projectsItem > div {
   display: flex;
@@ -283,7 +298,7 @@ textarea:focus {
   justify-content: center;
   margin-top: 50px;
 }
-#section4 > div > img {
+#section4 > div > a > img {
   margin: 50px;
   width: 100px;
 }
@@ -297,10 +312,55 @@ textarea:focus {
 legend {
   width: 200px;
 }
+@media (max-width: 1370px) {
+  p {
+    font-size: 24px;
+  }
+  #section1 > div {
+    flex-direction: column;
+  }
+  #section1 > div > img {
+    width: 80%;
+  }
+}
 
+@media (max-width: 1000px) {
+  p {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 120px;
+  }
+  ul {
+    padding-left: 0;
+    font-size: 30px;
+  }
+  #section1 {
+    flex-direction: column;
+  }
+
+  #section2 > img {
+    padding: 20px;
+    width: 120px;
+  }
+  #section4 > p {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .projectContainer {
+    padding-left: 20px;
+  }
+  input,
+  textarea {
+    width: 550px;
+  }
+}
 @media (max-width: 600px) {
   h1 {
-    font-size: 80px;
+    font-size: 100px;
   }
   ul {
     font-size: 20px;
@@ -372,9 +432,9 @@ legend {
     height: 70px;
   }
 
-  #section4 > div > img {
-    margin: 20px;
-    width: 50px;
+  #section4 > div > a > img {
+    margin: 30px;
+    width: 60px;
   }
   button.scrollUpBtn {
     width: 60px;
@@ -382,36 +442,5 @@ legend {
   }
   button.scrollUpBtn > img {
     height: 80%;
-  }
-}
-
-@media (max-width: 1000px) {
-  h1 {
-    font-size: 120px;
-  }
-  ul {
-    padding-left: 0;
-    font-size: 30px;
-  }
-  #section1 {
-    flex-direction: column;
-  }
-  #section2 > img {
-    padding: 20px;
-    width: 120px;
-  }
-  #section4 > p {
-    margin-right: 50px;
-    margin-left: 50px;
-  }
-}
-
-@media (max-width: 750px) {
-  .projectContainer {
-    padding-left: 20px;
-  }
-  input,
-  textarea {
-    width: 550px;
   }
 }

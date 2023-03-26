@@ -7,9 +7,9 @@
   src: url(/fonts/TiltNeon-Regular.ttf);
 }
 
-*{
+/* * {
   border: 2px solid yellow;
-}
+} */
 body {
   margin: 0;
   font-family: RegularNeon;
@@ -142,7 +142,7 @@ button.scrollUpBtn {
   border-radius: 50%;
   background-color: white;
   border: 2px black solid;
-  transition-property:transform box-shadow ;
+  transition-property: transform box-shadow;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
@@ -175,19 +175,19 @@ p {
 .projectContainer {
   padding-left: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 600px);
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, 620px);
+  gap: 30px;
 }
 
 .projectsItem {
-  height: 600px;
+  height: 680px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 30%);
   display: flex;
   flex-direction: column;
   text-align: center;
   padding-bottom: 15px;
   transition-property: transform;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   transition-timing-function: ease-out;
   overflow: hidden;
 }
@@ -196,17 +196,20 @@ p {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 45%);
 }
 
-.projectsItem>img{
+.projectsItem > img {
   height: 500px;
-  transition: all .5s;
+  transition: all 0.5s;
+}
+.projectsItem > p {
+  font-size: 21px;
 }
 .projectsItem > img:hover {
   transform: scale(1.1);
 }
 .Ico {
-  width: 60px;
+  width: 45px;
   transition-property: transform;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
 .Ico:hover {
@@ -271,7 +274,8 @@ textarea {
   border: 2px white solid;
   border-radius: 5px;
 }
-input:focus,textarea:focus{
+input:focus,
+textarea:focus {
   box-shadow: 0 0 20px white;
 }
 #section4 > div {
@@ -283,14 +287,97 @@ input:focus,textarea:focus{
   margin: 50px;
   width: 100px;
 }
-#section4>p{
+#section4 > p {
   text-align: center;
   margin-left: 250px;
   margin-right: 250px;
   margin-bottom: 50px;
 }
 
-legend{
-  width:200px;
+legend {
+  width: 200px;
+}
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 80px;
+  }
+  ul {
+    font-size: 20px;
+  }
+  #section1 {
+    flex-direction: column;
+    font-size: 16px;
+  }
+  #section1 > img {
+    height: 260px;
+    width: 260px;
+  }
+  .aboutContainer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .aboutContainer > p {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  #section2 > img {
+    padding: 20px;
+    width: 80px;
+  }
+  #section3 > p {
+    font-size: 16px;
+  }
+  .projectContainer {
+    padding-left: 0;
+    grid-template-columns: repeat(auto-fit, 280px);
+  }
+  .projectsItem {
+    height: 400px;
+  }
+
+  .Ico {
+    width: 35px;
+  }
+  #section4 > p {
+    margin: 0;
+    font-size: 20px;
+  }
+  form {
+    padding-top: 20px;
+    grid-template-columns: 200px;
+    grid-template-rows: 30px 70px 70px 350px 70px;
+  }
+  input,
+  textarea {
+    width: 230px;
+  }
+  input {
+    height: 50px;
+  }
+  textarea {
+    height: 280px;
+  }
+  form > button {
+    font-size: 20px;
+    border-radius: 25px;
+    margin-left: 15px;
+    margin-top: 0;
+    width: 160px;
+    height: 70px;
+  }
+
+  #section4 > div > img {
+    margin: 20px;
+    width: 50px;
+  }
+  button.scrollUpBtn {
+    width: 60px;
+    height: 60px;
+  }
+  button.scrollUpBtn > img {
+    height: 80%;
+  }
 }

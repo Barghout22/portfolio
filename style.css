@@ -182,7 +182,7 @@ p {
   padding-left: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 620px);
-  gap: 30px;
+  gap: 50px;
 }
 
 .projectsItem {

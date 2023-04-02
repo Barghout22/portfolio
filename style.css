@@ -34,7 +34,7 @@ header {
 h1 {
   color: #2c2b2b;
   font-family: BillBoard;
-  font-size: 200px;
+  font-size: 140px;
   text-shadow: 0 0 0px white;
   animation: lightUp 2s 1s 1 ease-in;
   animation: glow 1.5s 2s infinite alternate;
@@ -72,7 +72,7 @@ ul {
   justify-content: space-around;
   list-style: none;
   font-family: RegularNeon;
-  font-size: 50px;
+  font-size: 40px;
   z-index: 1;
 }
 
@@ -146,6 +146,7 @@ button.scrollUpBtn {
   transition-property: transform box-shadow;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
+  z-index: 1;
 }
 
 .scrollUpBtn:hover {
@@ -206,12 +207,13 @@ p {
 .projectsItem > img {
   height: 400px;
   transition: all 0.5s;
+  transform: scale(.95);
 }
 .projectsItem > p {
   font-size: 21px;
 }
 .projectsItem > img:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 .Ico {
   width: 55px;

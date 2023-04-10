@@ -207,10 +207,12 @@ p {
 .projectsItem > img {
   height: 400px;
   transition: all 0.5s;
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 .projectsItem > p {
   font-size: 21px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 .projectsItem > img:hover {
   transform: scale(1);
@@ -362,7 +364,7 @@ legend {
 }
 @media (max-width: 600px) {
   h1 {
-    font-size: 100px;
+    font-size: 80px;
   }
   ul {
     font-size: 20px;
@@ -401,6 +403,9 @@ legend {
   }
   .projectsItem {
     height: 500px;
+  }
+  .projectsItem > p {
+    font-size: 14px;
   }
 
   .Ico {

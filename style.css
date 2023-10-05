@@ -184,7 +184,6 @@ p {
 }
 
 .projectsItem {
-  height: 600px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 30%);
   display: flex;
   flex-direction: column;
@@ -330,6 +329,15 @@ legend {
     margin: 0 20%;
   }
 }
+@media (max-width:1160px){
+    .projectContainer {
+      padding: 0;
+    grid-template-columns: repeat(auto-fit, 450px);
+  }
+  
+  
+
+}
 
 @media (max-width: 1000px) {
   p {
@@ -358,7 +366,7 @@ legend {
 
 @media (max-width: 750px) {
   .projectContainer {
-    padding-left: 20px;
+    padding: 0 10%;
   }
   input,
   textarea {
@@ -404,8 +412,8 @@ legend {
     padding:0 10%;
     grid-template-columns: repeat(auto-fit, 300px);
   }
-  .projectsItem {
-    height: 400px;
+  .projectsItem>img {
+    height: 200px;
   }
   .projectsItem > p {
     font-size: 14px;

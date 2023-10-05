@@ -7,9 +7,6 @@
   src: url(./fonts/TiltNeon-Regular.ttf);
 }
 
-/* * {
-  border: 2px solid yellow;
-} */
 body {
   margin: 0;
   font-family: RegularNeon;
@@ -152,6 +149,7 @@ button.scrollUpBtn {
 .scrollUpBtn:hover {
   box-shadow: 2px 2px black;
   transform: scale(1.04);
+  cursor: pointer;
 }
 
 #section1 {
@@ -163,10 +161,9 @@ button.scrollUpBtn {
 }
 #section1 > div > img {
   width: 40%;
+  border-radius: 50%;
 }
-/* #section1 > img {
-  width: 70%;
-} */
+
 .aboutContainer {
   margin: 20px;
 }
@@ -182,22 +179,24 @@ p {
 .projectContainer {
   padding-left: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 620px);
+  grid-template-columns: repeat(auto-fit, 500px);
   gap: 50px;
 }
 
 .projectsItem {
-  height: 680px;
+  height: 600px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 30%);
   display: flex;
   flex-direction: column;
   text-align: center;
   padding-bottom: 15px;
+  border-radius: 10px;
   transition-property: transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-out;
   overflow: hidden;
   z-index: 1;
+  background-color: #e4e4e4;
 }
 
 .projectsItem:hover {
@@ -209,10 +208,13 @@ p {
   transition: all 0.5s;
   transform: scale(0.95);
 }
+.projectsItem >h3{
+  font-size: 2em;
+  margin: 0;
+}
 .projectsItem > p {
   font-size: 21px;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin: 0 8px;
 }
 .projectsItem > img:hover {
   transform: scale(1);
@@ -324,7 +326,8 @@ legend {
     flex-direction: column;
   }
   #section1 > div > img {
-    width: 80%;
+    width: 60%;
+    margin: 0 20%;
   }
 }
 
@@ -398,11 +401,11 @@ legend {
     font-size: 16px;
   }
   .projectContainer {
-    padding-left: 30px;
-    grid-template-columns: repeat(auto-fit, 280px);
+    padding:0 10%;
+    grid-template-columns: repeat(auto-fit, 300px);
   }
   .projectsItem {
-    height: 500px;
+    height: 400px;
   }
   .projectsItem > p {
     font-size: 14px;

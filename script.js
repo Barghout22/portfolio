@@ -51,3 +51,54 @@ document.addEventListener("wheel", () => {
     scrollUpBtn.style.display = "none";
   }
 });
+
+const imageElements = {
+  project1: document.getElementById("project1").querySelector("img"),
+  project5: document.getElementById("project5").querySelector("img"),
+  project6: document.getElementById("project6").querySelector("img"),
+};
+
+const imageSources = {
+  project1: [
+    "http://127.0.0.1:5500/project%20Screenshots/project1/image2.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project1/image3.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project1/image4.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project1/image5.png",
+  ],
+  
+  project5: [
+    "http://127.0.0.1:5500/project%20Screenshots/project5/image2.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project5/image3.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project5/image4.png",
+  ],
+  project6: [
+    "http://127.0.0.1:5500/project%20Screenshots/project6/image2.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project6/image3.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project6/image4.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project6/image5.png",
+  ],
+};
+
+const intervalIds = {};
+
+function startImageChange(projectId) {
+  // Start changing the image source for the specified div every 2 seconds
+  intervalIds[projectId] = setInterval(() => changeImageSource(projectId), 1000);
+}
+
+function changeImageSource(projectId) {
+  // Change the image source for the specified div to the next source in the array
+  const currentIndex = imageSources[projectId].indexOf(
+    imageElements[projectId].src
+  );
+  const nextIndex = (currentIndex + 1) % imageSources[projectId].length;
+  imageElements[projectId].src = imageSources[projectId][nextIndex];
+}
+
+function resetImage(projectId) {
+  // Reset the image for the specified div to the original source when the mouse leaves the div
+  clearInterval(intervalIds[projectId]);
+  imageElements[
+    projectId
+  ].src = `./project Screenshots/${projectId}/image1.png`;
+}

@@ -93,7 +93,7 @@ function startImageChange(projectId) {
   // Start changing the image source for the specified div every 2 seconds
   intervalIds[projectId] = setInterval(
     () => changeImageSource(projectId),
-    1000
+    1500
   );
 }
 
@@ -112,4 +112,24 @@ function resetImage(projectId) {
   imageElements[
     projectId
   ].src = `./project Screenshots/${projectId}/image1.png`;
+}
+
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", handleSubmit);
+function handleSubmit(e) {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    mode: "no-cors",
+  })
+    .then((Response) => {
+      console.log(Response);
+      window.location.href = "thankyou.html";
+    })
+    .catch((e) => {
+      console.error("error sending data:", e);
+    });
 }

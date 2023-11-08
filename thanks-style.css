@@ -1,0 +1,39 @@
+@font-face {
+  font-family: RegularNeon;
+  src: url(./fonts/TiltNeon-Regular.ttf);
+}
+*{
+  font-family: RegularNeon;
+;
+}
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.messageContainer {
+  background-color: white;
+  margin-top: 10%;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+div.messageContainer > p {
+  font-size: 30px;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+a > p {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  transition: transform 0.5s;
+}
+a>p:hover{
+    background-color: rgb(42, 41, 41);
+    transform: scale(1.01);
+}

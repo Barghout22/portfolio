@@ -7,8 +7,6 @@ listButton.forEach((button) =>
 
 function handleNavClick(event) {
   const anchorVal = event.target.id;
-  console.log(anchorVal);
-  console.log(document.querySelector("#section1"));
   setTimeout(() => {
     scrollUpBtn.style.display = "block";
   }, 1500);
@@ -62,35 +60,35 @@ const imageElements = {
 
 const imageSources = {
   project1: [
-    "http://127.0.0.1:5500/project%20Screenshots/project1/image2.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project1/image3.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project1/image4.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project1/image5.png",
+    "project-screenshots/project1/image2.png",
+    "project-screenshots/project1/image3.png",
+    "project-screenshots/project1/image4.png",
+    "project-screenshots/project1/image5.png",
   ],
   project2: [
-    "http://127.0.0.1:5500/project%20Screenshots/project2/image2.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project2/image3.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project2/image4.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project2/image5.png",
+    "project-screenshots/project2/image2.png",
+    "project-screenshots/project2/image3.png",
+    "project-screenshots/project2/image4.png",
+    "project-screenshots/project2/image5.png",
   ],
   project3: [
-    "http://127.0.0.1:5500/project%20Screenshots/project3/image2.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project3/image3.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project3/image4.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project3/image5.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project3/image6.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project3/image7.png",
+    "project-screenshots/project3/image2.png",
+    "project-screenshots/project3/image3.png",
+    "project-screenshots/project3/image4.png",
+    "project-screenshots/project3/image5.png",
+    "project-screenshots/project3/image6.png",
+    "project-screenshots/project3/image7.png",
   ],
   project4: [
-    "http://127.0.0.1:5500/project%20Screenshots/project4/image2.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project4/image3.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project4/image4.png",
+    "project-screenshots/project4/image2.png",
+    "project-screenshots/project4/image3.png",
+    "project-screenshots/project4/image4.png",
   ],
   project5: [
-    "http://127.0.0.1:5500/project%20Screenshots/project5/image2.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project5/image3.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project5/image4.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project5/image5.png",
+    "project-screenshots/project5/image2.png",
+    "project-screenshots/project5/image3.png",
+    "project-screenshots/project5/image4.png",
+    "project-screenshots/project5/image5.png",
   ],
 };
 
@@ -118,7 +116,7 @@ function resetImage(projectId) {
   clearInterval(intervalIds[projectId]);
   imageElements[
     projectId
-  ].src = `./project Screenshots/${projectId}/image1.png`;
+  ].src = `project-screenshots/${projectId}/image1.png`;
 }
 
 const form = document.getElementById("contactForm");

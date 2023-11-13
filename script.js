@@ -57,38 +57,38 @@ const imageElements = {
   project4: document.getElementById("project4").querySelector("img"),
   project5: document.getElementById("project5").querySelector("img"),
 };
-
+const elemPrefix = "https://4f7df317.mahmoud-barghout.pages.dev";
 const imageSources = {
   project1: [
-    "./project-screenshots/project1/image2.png",
-    "./project-screenshots/project1/image3.png",
-    "./project-screenshots/project1/image4.png",
-    "./project-screenshots/project1/image5.png",
+    elemPrefix + "/project-screenshots/project1/image2.png",
+    elemPrefix + "/project-screenshots/project1/image3.png",
+    elemPrefix + "/project-screenshots/project1/image4.png",
+    elemPrefix + "/project-screenshots/project1/image5.png",
   ],
   project2: [
-    "./project-screenshots/project2/image2.png",
-    "./project-screenshots/project2/image3.png",
-    "./project-screenshots/project2/image4.png",
-    "./project-screenshots/project2/image5.png",
+    elemPrefix + "/project-screenshots/project2/image2.png",
+    elemPrefix + "/project-screenshots/project2/image3.png",
+    elemPrefix + "/project-screenshots/project2/image4.png",
+    elemPrefix + "/project-screenshots/project2/image5.png",
   ],
   project3: [
-    "./project-screenshots/project3/image2.png",
-    "./project-screenshots/project3/image3.png",
-    "./project-screenshots/project3/image4.png",
-    "./project-screenshots/project3/image5.png",
-    "./project-screenshots/project3/image6.png",
-    "./project-screenshots/project3/image7.png",
+    elemPrefix + "/project-screenshots/project3/image2.png",
+    elemPrefix + "/project-screenshots/project3/image3.png",
+    elemPrefix + "/project-screenshots/project3/image4.png",
+    elemPrefix + "/project-screenshots/project3/image5.png",
+    elemPrefix + "/project-screenshots/project3/image6.png",
+    elemPrefix + "/project-screenshots/project3/image7.png",
   ],
   project4: [
-    "./project-screenshots/project4/image2.png",
-    "./project-screenshots/project4/image3.png",
-    "./project-screenshots/project4/image4.png",
+    elemPrefix + "/project-screenshots/project4/image2.png",
+    elemPrefix + "/project-screenshots/project4/image3.png",
+    elemPrefix + "/project-screenshots/project4/image4.png",
   ],
   project5: [
-    "./project-screenshots/project5/image2.png",
-    "./project-screenshots/project5/image3.png",
-    "./project-screenshots/project5/image4.png",
-    "./project-screenshots/project5/image5.png",
+    elemPrefix + "/project-screenshots/project5/image2.png",
+    elemPrefix + "/project-screenshots/project5/image3.png",
+    elemPrefix + "/project-screenshots/project5/image4.png",
+    elemPrefix + "/project-screenshots/project5/image5.png",
   ],
 };
 

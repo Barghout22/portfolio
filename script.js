@@ -60,35 +60,35 @@ const imageElements = {
 
 const imageSources = {
   project1: [
-    "project-screenshots/project1/image2.png",
-    "project-screenshots/project1/image3.png",
-    "project-screenshots/project1/image4.png",
-    "project-screenshots/project1/image5.png",
+    "./project-screenshots/project1/image2.png",
+    "./project-screenshots/project1/image3.png",
+    "./project-screenshots/project1/image4.png",
+    "./project-screenshots/project1/image5.png",
   ],
   project2: [
-    "project-screenshots/project2/image2.png",
-    "project-screenshots/project2/image3.png",
-    "project-screenshots/project2/image4.png",
-    "project-screenshots/project2/image5.png",
+    "./project-screenshots/project2/image2.png",
+    "./project-screenshots/project2/image3.png",
+    "./project-screenshots/project2/image4.png",
+    "./project-screenshots/project2/image5.png",
   ],
   project3: [
-    "project-screenshots/project3/image2.png",
-    "project-screenshots/project3/image3.png",
-    "project-screenshots/project3/image4.png",
-    "project-screenshots/project3/image5.png",
-    "project-screenshots/project3/image6.png",
-    "project-screenshots/project3/image7.png",
+    "./project-screenshots/project3/image2.png",
+    "./project-screenshots/project3/image3.png",
+    "./project-screenshots/project3/image4.png",
+    "./project-screenshots/project3/image5.png",
+    "./project-screenshots/project3/image6.png",
+    "./project-screenshots/project3/image7.png",
   ],
   project4: [
-    "project-screenshots/project4/image2.png",
-    "project-screenshots/project4/image3.png",
-    "project-screenshots/project4/image4.png",
+    "./project-screenshots/project4/image2.png",
+    "./project-screenshots/project4/image3.png",
+    "./project-screenshots/project4/image4.png",
   ],
   project5: [
-    "project-screenshots/project5/image2.png",
-    "project-screenshots/project5/image3.png",
-    "project-screenshots/project5/image4.png",
-    "project-screenshots/project5/image5.png",
+    "./project-screenshots/project5/image2.png",
+    "./project-screenshots/project5/image3.png",
+    "./project-screenshots/project5/image4.png",
+    "./project-screenshots/project5/image5.png",
   ],
 };
 
@@ -104,19 +104,22 @@ function startImageChange(projectId) {
 
 function changeImageSource(projectId) {
   // Change the image source for the specified div to the next source in the array
+  console.log(imageElements[projectId].src);
   const currentIndex = imageSources[projectId].indexOf(
     imageElements[projectId].src
   );
   const nextIndex = (currentIndex + 1) % imageSources[projectId].length;
   imageElements[projectId].src = imageSources[projectId][nextIndex];
+
+  console.log(currentIndex);
+  console.log(nextIndex);
+  console.log(imageSources[projectId][nextIndex]);
 }
 
 function resetImage(projectId) {
   // Reset the image for the specified div to the original source when the mouse leaves the div
   clearInterval(intervalIds[projectId]);
-  imageElements[
-    projectId
-  ].src = `project-screenshots/${projectId}/image1.png`;
+  imageElements[projectId].src = `project-screenshots/${projectId}/image1.png`;
 }
 
 const form = document.getElementById("contactForm");

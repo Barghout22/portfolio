@@ -86,13 +86,11 @@ const imageSources = {
     elemPrefix + "/project-screenshots/project4/image4.png",
   ],
   project5: [
-    elemPrefix + "project-screenshots/project5/image2.png",
     elemPrefix + "/project-screenshots/project5/image3.png",
     elemPrefix + "/project-screenshots/project5/image4.png",
     elemPrefix + "/project-screenshots/project5/image5.png",
   ],
 };
-
 const intervalIds = {};
 
 function startImageChange(projectId) {

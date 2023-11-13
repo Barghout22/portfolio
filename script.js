@@ -57,7 +57,7 @@ const imageElements = {
   project4: document.getElementById("project4").querySelector("img"),
   project5: document.getElementById("project5").querySelector("img"),
 };
-const elemPrefix = "https://4f7df317.mahmoud-barghout.pages.dev";
+const elemPrefix = window.location.origin;
 
 const imageSources = {
   project1: [
@@ -86,6 +86,7 @@ const imageSources = {
     elemPrefix + "/project-screenshots/project4/image4.png",
   ],
   project5: [
+    elemPrefix + "/project-screenshots/project5/image2.png",
     elemPrefix + "/project-screenshots/project5/image3.png",
     elemPrefix + "/project-screenshots/project5/image4.png",
     elemPrefix + "/project-screenshots/project5/image5.png",

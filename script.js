@@ -58,6 +58,7 @@ const imageElements = {
   project5: document.getElementById("project5").querySelector("img"),
 };
 const elemPrefix = "https://4f7df317.mahmoud-barghout.pages.dev";
+
 const imageSources = {
   project1: [
     elemPrefix + "/project-screenshots/project1/image2.png",
@@ -85,7 +86,7 @@ const imageSources = {
     elemPrefix + "/project-screenshots/project4/image4.png",
   ],
   project5: [
-    elemPrefix + "/project-screenshots/project5/image2.png",
+    elemPrefix + "project-screenshots/project5/image2.png",
     elemPrefix + "/project-screenshots/project5/image3.png",
     elemPrefix + "/project-screenshots/project5/image4.png",
     elemPrefix + "/project-screenshots/project5/image5.png",
@@ -104,16 +105,14 @@ function startImageChange(projectId) {
 
 function changeImageSource(projectId) {
   // Change the image source for the specified div to the next source in the array
-  console.log(imageElements[projectId].src);
   const currentIndex = imageSources[projectId].indexOf(
     imageElements[projectId].src
   );
   const nextIndex = (currentIndex + 1) % imageSources[projectId].length;
   imageElements[projectId].src = imageSources[projectId][nextIndex];
 
-  console.log(currentIndex);
-  console.log(nextIndex);
-  console.log(imageSources[projectId][nextIndex]);
+  // console.log(nextIndex);
+  // console.log(imageSources[projectId][nextIndex]);
 }
 
 function resetImage(projectId) {

@@ -55,9 +55,9 @@ document.addEventListener("wheel", () => {
 const imageElements = {
   project1: document.getElementById("project1").querySelector("img"),
   project2: document.getElementById("project2").querySelector("img"),
-
+  project3: document.getElementById("project3").querySelector("img"),
+  project4: document.getElementById("project4").querySelector("img"),
   project5: document.getElementById("project5").querySelector("img"),
-  project6: document.getElementById("project6").querySelector("img"),
 };
 
 const imageSources = {
@@ -73,17 +73,24 @@ const imageSources = {
     "http://127.0.0.1:5500/project%20Screenshots/project2/image4.png",
     "http://127.0.0.1:5500/project%20Screenshots/project2/image5.png",
   ],
-
+  project3: [
+    "http://127.0.0.1:5500/project%20Screenshots/project3/image2.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project3/image3.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project3/image4.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project3/image5.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project3/image6.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project3/image7.png",
+  ],
+  project4: [
+    "http://127.0.0.1:5500/project%20Screenshots/project4/image2.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project4/image3.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project4/image4.png",
+  ],
   project5: [
     "http://127.0.0.1:5500/project%20Screenshots/project5/image2.png",
     "http://127.0.0.1:5500/project%20Screenshots/project5/image3.png",
     "http://127.0.0.1:5500/project%20Screenshots/project5/image4.png",
-  ],
-  project6: [
-    "http://127.0.0.1:5500/project%20Screenshots/project6/image2.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project6/image3.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project6/image4.png",
-    "http://127.0.0.1:5500/project%20Screenshots/project6/image5.png",
+    "http://127.0.0.1:5500/project%20Screenshots/project5/image5.png",
   ],
 };
 

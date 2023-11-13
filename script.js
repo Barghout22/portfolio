@@ -92,6 +92,7 @@ const imageSources = {
     elemPrefix + "/project-screenshots/project5/image5.png",
   ],
 };
+console.log(imageSources["project5"]);
 const intervalIds = {};
 
 function startImageChange(projectId) {
